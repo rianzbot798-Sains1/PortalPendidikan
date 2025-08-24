@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>TUGAS KKA</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Artikel Pendidikan</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero" id="hero">
+    <div class="hero-bg" aria-hidden="true">
+      <div class="sun" id="sun">☀️</div>
+      <div class="moon" id="moon">🌙</div>
+      <div class="stars" id="stars" aria-hidden="true"></div>
+    </div>
+
+    <div class="hero-inner">
+      <div class="brand">
+        <h1>Artikel Pendidikan</h1>
+        <p class="subtitle">Membangun masa depan dengan inovasi dan pemikiran positif</p>
+      </div>
+
+      <div class="controls">
+        <div class="search-wrap" id="searchWrap" title="Klik untuk mencari">
+          <svg class="icon-search" viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 14h-.79l-.28-.27A6.5 6.5 0 1 0 16 9.5 6.5 6.5 0 0 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79L20 21.5 21.5 20l-6-6zM4 9.5C4 6.46 6.46 4 9.5 4S15 6.46 15 9.5 12.54 15 9.5 15 4 12.54 4 9.5z"/></svg>
+          <input id="searchInput" type="text" placeholder="Cari artikel..." aria-label="Cari artikel">
+        </div>
+
+        <button id="toggleMode" class="mode-btn" aria-pressed="false" aria-label="Ganti mode">
+          <span class="visually-hidden">Mode</span>
+          <span class="icon-sun">☀️</span>
+          <span class="icon-moon">🌙</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="quote-wrap">
+      <blockquote id="quoteBox">Membangun masa depan dengan inovasi dan pemikiran positif</blockquote>
+    </div>
+  </header>
+
+  <main class="content-area" id="contentArea">
+    <!-- LIST PAGE -->
+    <section id="listPage" class="page active" aria-live="polite">
+      <div class="container">
+        <article class="card" data-target="artikel1" tabindex="0">
+          <h2>Guru Inovatif dan Kreatif adalah Investasi untuk Masa Depan</h2>
+          <p class="lead">Klik untuk membaca selengkapnya…</p>
+        </article>
+
+        <article class="card" data-target="artikel2" tabindex="0">
+          <h2>Pergaulan Murid dan Dinamika Pemikiran Mereka</h2>
+          <p class="lead">Klik untuk membaca selengkapnya…</p>
+        </article>
+         <article class="card" data-target="artikel3" tabindex="0">
+
+          <h2>Kesehatan Mental Di Sekolah: Tantangan Siswa Zaman Sekarang</h2>
+
+          <p class="lead">Klik untuk membaca selengkapnya…</p>
+
+        </article>
+      </div>
+    </section>
+    
+
+    <!-- DETAIL PAGE -->
+    <section id="detailPage" class="page" aria-live="polite" aria-hidden="true">
+      <div class="container">
+        <button id="btnBack" class="back-btn" aria-label="Kembali ke daftar">← Kembali</button>
+        <h2 id="detailTitle"></h2>
+        <p class="meta" id="detailMeta"></p>
+        <article id="detailBody" class="article-body"></article>
+
+        <div class="comment-section">
+          <h3>Tinggalkan Komentar</h3>
+          <form id="commentForm">
+            <input id="commentName" type="text" placeholder="Nama" required>
+            <textarea id="commentText" placeholder="Tulis komentar..." required></textarea>
+            <button type="submit">Kirim</button>
+          </form>
+          <div id="commentList"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <button id="btnTop" class="btn-top" title="Kembali ke atas">↑</button>
+
+  <a class="fab-wa" id="fabWa" href="https://wa.me/6281367356152" target="_blank" aria-label="Hubungi via WhatsApp">
+    <svg viewBox="0 0 32 32" class="wa-svg" aria-hidden="true"><path d="M19.11 17.41c-.23-.11-1.37-.68-1.58-.76-.21-.08-.36-.11-.51.11-.15.23-.58.76-.71.91-.13.15-.26.17-.49.06-.23-.11-.97-.36-1.84-1.15-.68-.61-1.14-1.36-1.28-1.59-.13-.23-.01-.35.1-.46.1-.1.23-.26.33-.39.11-.13.15-.23.23-.38.08-.15.04-.29-.02-.41-.06-.11-.51-1.23-.7-1.68-.19-.45-.37-.38-.51-.39-.13-.01-.29-.01-.44-.01-.15 0-.41.06-.62.29-.21.23-.81.79-.81 1.93s.83 2.24.95 2.39c.11.15 1.64 2.51 3.98 3.52.56.24 1 .38 1.35.49.57.18 1.09.15 1.5.09.46-.07 1.37-.56 1.57-1.11.19-.56.19-1.04.13-1.14-.06-.1-.21-.16-.44-.27zM16.05 29C8.85 29 3 23.15 3 15.95 3 8.85 8.85 3 16.05 3 23.15 3 29 8.85 29 15.95 29 23.15 23.15 29 16.05 29zm0-23.27c-6.12 0-11.09 4.97-11.09 11.09 0 1.95.51 3.78 1.39 5.37L5 27l4.01-1.05a11.03 11.03 0 0 0 7.04 2.37c6.12 0 11.09-4.97 11.09-11.09S22.17 5.73 16.05 5.73z"/></svg>
+  </a>
+
+  <footer class="site-footer" id="siteFooter">
+    <p>&copy; 2025 Portal Artikel Pendidikan</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
